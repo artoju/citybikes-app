@@ -39,9 +39,9 @@ class MapSelection extends Component {
     return (
         <div className="networks">
         <input onChange={this.handleChange} value={this.state.search} type="text" name="search" placeholder="e.g. helsinki fi"/>
-        <ul>
-            {networksList}
-        </ul>
+            <ul>
+                {networksList}
+            </ul>
         </div>
     );
   }

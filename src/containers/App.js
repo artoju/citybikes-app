@@ -9,8 +9,6 @@ import MapSelection from './MapSelection';
 class App extends Component {
   state = {selected: null}
 
-
-
   selectCity = (city) => {
     this.setState({selected: city});
   }

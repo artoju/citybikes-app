@@ -65,8 +65,18 @@ li {
   top: 20em;
   left: 2em;
   width: 10em;
-  height: 30em;
+  height: 10em;
   text-align: center;
+}
+
+#temp {
+  float: left;
+  margin-left: 1em;
+}
+
+#icon {
+  float: right;
+  margin-right: 1em;
 }
 
 .directions-container {

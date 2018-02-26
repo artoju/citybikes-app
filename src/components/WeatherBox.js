@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { fetchWeather } from '../actions';
-import * as urlMaker from '../urls/urlMaker'
+import  urlMaker from '../urls/urlMaker'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
  
@@ -26,9 +25,8 @@ class WeatherBox extends Component {
       : 
       <div>
         <h3>Weather in {weather.city}, {weather.country}</h3>
-        <p id="temp">{weather.temp}</p>
-        <p id="descr">{weather.description}</p>
-         <img id="icon" src={urlMaker.urlMaker.icon(weather.icon)}/></div>  }
+        <p id="temp">{weather.temp}&deg;C, {weather.description}</p>
+        <img id="icon" src={urlMaker.icon(weather.icon)}/></div>  }
       </div>
     );
   }

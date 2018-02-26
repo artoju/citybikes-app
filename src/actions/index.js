@@ -1,12 +1,11 @@
 import axios from "axios";
 import * as api from "../apikeys";
-import * as urlMaker from "../urls/urlMaker"
-
+import urlMaker from "../urls/urlMaker"
 
 export function fetchStations(id) {
     return function(dispatch, getState) {
         dispatch({type: "FETCH_STATIONS"});
-        axios.get(urlMaker.urlMaker.stations(id))
+        axios.get(urlMaker.stations(id))
         .then((response) => {
             var stations = response.data.network.stations;
             var locations;
@@ -27,7 +26,7 @@ export function fetchStations(id) {
 export function fetchWeather(position) {
     return function(dispatch, getState) {
         dispatch({type: "FETCH_WEATHER"});
-        axios.get(urlMaker.urlMaker.weather(api.WM_KEY, position))
+        axios.get(urlMaker.weather(api.WM_KEY, position))
         .then((response) => {
             const weather = {temp: response.data.main.temp, 
                 icon: response.data.weather[0].icon,
@@ -42,15 +41,10 @@ export function fetchWeather(position) {
     }
 }
 
-export function selectMap(map) {
-    return function(dispatch, getState) {
-        dispatch({type: "SELECT_MAP", payload: map});
-    }
-} 
 export function fetchNetworks() {
     return function(dispatch, getState) {
         dispatch({type: "FETCH_NETWORKS"});
-        axios.get(urlMaker.urlMaker.networks())
+        axios.get(urlMaker.networks())
         .then((response) => {
             const networks = response.data.networks.map(network => 
                     ({id: network.id, 
