@@ -1,0 +1,91 @@
+.App {
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+
+.map-container {
+  height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+text-align: center;
+}
+
+li > button {
+  width: 100%;
+  margin: auto;
+}
+
+ul {
+  width: 100%;
+  padding: 0;
+  margin: auto;
+}
+
+li {
+  list-style: none;
+  margin: 0.5em auto 0.5em auto;
+}
+
+.networks {
+  margin: auto;
+  width: 20em;
+  padding: 0;
+}
+
+.networks > input {
+  margin: auto;
+  width: 100%;
+}
+
+.floater {
+  z-index:99;
+  position: fixed;
+  background: white;
+  opacity: 0.7;
+}
+
+.back-button {
+  top: 2em;
+  left: 2em;
+  width: 4em;
+  padding: 1em;
+  border-radius: 10px;
+}
+.weatherbox {
+  border-radius: 10px;
+  top: 20em;
+  left: 2em;
+  width: 10em;
+  height: 30em;
+  text-align: center;
+}
+
+.directions-container {
+  border-radius: 10px;
+  top: 8em;
+  left: 2em;
+  width: 10em;
+  height: 10em;
+}
+
+.directions-content {
+  margin-left: 1em;
+  width: 80%;
+}
+
+.directions-content > input, button {
+  width: 100%;
+}
+
+.directions > h3 {
+  text-align: center;
+}
